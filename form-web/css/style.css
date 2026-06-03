@@ -1,3 +1,21 @@
 body {
     background-color: #cacaca;
 }
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    border: 1px solid #000;
+    margin: 0 auto;
+}
+
+header {
+    height: 250px;
+    background-color: #a144cc;
+}
+
+header h1 {
+    font-size: 35px;
+    color: #fff;
+    padding: 20px;
+}
