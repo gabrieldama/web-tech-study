@@ -3,6 +3,8 @@
 */ 
 
 const nome = document.querySelector("#nome");
+const email = document.querySelector("#email");
+const telefone = document.querySelector("#telefone");
 const button = document.querySelector("button");
 const lista = document.querySelector(".lista");
 
@@ -12,7 +14,7 @@ const lista = document.querySelector(".lista");
 
 button.addEventListener("click", (event) => {
     event.preventDefault();
-    const inputValue = nome.value;
+    const inputValue = nome.value + " - " + email.value + " - " + telefone.value;
     const templateHTML = `<li>${inputValue}</li>`;
 
 
@@ -20,4 +22,6 @@ button.addEventListener("click", (event) => {
     lista.innerHTML = templateHTML + lista.innerHTML;
     // limpar o campo de input
     nome.value = "";
+    email.value = "";
+    telefone.value = "";
 });
