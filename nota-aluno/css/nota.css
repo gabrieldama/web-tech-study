@@ -3,8 +3,9 @@
     padding: 0;
 }
 
-body {
-    background: #483D8B;
+body { /* Cor do fundo gradient diagonal */
+    background: linear-gradient(90deg, #483D8B, #2e2566);
+
 }
 
 .container {
@@ -27,6 +28,9 @@ body {
 }
 
 .form-control input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     /*Espaçamento entre os elementos*/
     margin-top: 15px;
     margin-bottom: 15px;
