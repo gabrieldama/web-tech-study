@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nota do Aluno</title>
     <link rel="stylesheet" href="./css/nota.css">
+    
 </head>
 <body>
     <main class="container">
@@ -14,8 +15,15 @@
                 <input type="number" min="0" max="10" id="nota" />
             </article>
 
+            <section id="message">
+                <span id="result">Digite a nota do aluno.</span>
+            </section>
+
             <button id="verifica-nota" onclick="resultadoNotaClick(event)">Verificar Nota</button>
         </form>
+        <div id="resultado" >
+            <span></span>
+        </div>
     </main>
     
     <script src="./js/nota.js"></script>

@@ -9,6 +9,9 @@ body { /* Cor do fundo gradient diagonal */
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     /*Largura*/
     width: 100%;
     max-width:450px;
@@ -21,7 +24,6 @@ body { /* Cor do fundo gradient diagonal */
 }
 
 .container form {
-    /*Flexbox*/
     display: flex;
     flex-direction: column;
     align-items: center;
