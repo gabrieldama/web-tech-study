@@ -12,9 +12,12 @@ salvarBtn.addEventListener("click", function(event) {
     }
 
     // Salvar no localstorage
-    const chave = `valorSalvo_${Date.now()}`;
+    const chave = `ValorSalvo_${Date.now()}`;
     localStorage.setItem(chave, valor)
 
     // Limpar campo após salvar
     campo.value = ""
+
+    // Exibir os valores salvos
+    carregarValoresSalvos()
 })
