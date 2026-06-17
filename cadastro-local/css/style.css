@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #505050;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    background-color: #ffffff;
+    background-color: #9e9e9e;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -45,7 +45,7 @@ input[type="text"] {
 
 button {
     background-color: #ff0066;
-    color: white;
+    color: rgb(255, 255, 255);
     border: none;
     padding: 10px 15px;
     font-size: 16px;
