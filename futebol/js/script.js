@@ -11,4 +11,14 @@ const jogadores = [
     "Raphinha"
 ];
 
-function listarJogadores() {}
+function listarJogadores() {
+    let lista = document.getElementById("listaJogadores");
+    lista.innerHTML = "";
+
+    for (let i = 0; i < jogadores.length; i++) {
+        lista.innerHTML += "<li>" + jogadores[i] + "</li>";
+    }
+}
+
+const btnMostrar = document.getElementById("btnMostrar");
+btnMostrar.addEventListener("click", listarJogadores);
