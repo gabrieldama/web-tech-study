@@ -18,14 +18,13 @@ texto.innerHTML = "Funcionou, o card mudou de cor e o botão sumiu!";
 
 titulo.innerText = "Card Alterado com sucesso!";
 titulo.style.color = "white";
-
 descricao.style.display = "none";
 
 botaoReverter.style.display = "block";
 botaoSurpresa.style.display = "block";
 
 //Deixa o background da pagina gradiente
-document.body.style.background = "linear-gradient(to right, #6b6a69, #636160)";
+document.body.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNl2lY9lH-2b3zjq-rHOPJMJGTS3OaBphr3yz-ot3To9-1Fa07y9CC968&s=10')";
 
 //Adiciona uma imagem no background da pagina
 document.body.style.backgroundSize = "cover";
