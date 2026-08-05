@@ -1,7 +1,6 @@
 const botao = document.querySelector("#btnMudar")
-// botão que reverte o estilo do card para o original
 const botaoReverter = document.querySelector("#btnReverter")
-const botaoSurpresa = document.querySelector("#btnSurpresa")
+const botaoSurpresa = document.querySelector("#imgSurpresa")
 const card = document.querySelector("#card")
 const texto = document.querySelector("#texto")
 const titulo = document.querySelector("#titulo")
@@ -23,10 +22,10 @@ descricao.style.display = "none";
 botaoReverter.style.display = "block";
 botaoSurpresa.style.display = "block";
 
-//Deixa o background da pagina gradiente
 document.body.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNl2lY9lH-2b3zjq-rHOPJMJGTS3OaBphr3yz-ot3To9-1Fa07y9CC968&s=10')";
+document.body.style.backgroundRepeat = "no-repeat";
+document.body.style.backgroundSize = "cover";   
 
-//Adiciona uma imagem no background da pagina
 document.body.style.backgroundSize = "cover";
 document.body.style.backgroundPosition = "center";
 })
