@@ -48,6 +48,9 @@ document.body.style.background = "linear-gradient(to right, #f8f9fa, #e9ecef)";
 botaoSurpresa.addEventListener("click", function() {
     
 document.body.style.backgroundImage = "url('https://i.pinimg.com/736x/77/c1/33/77c13333446751de8bb1d8d352661ee4.jpg')";
+document.body.style.backgroundRepeat = "no-repeat";
+document.body.style.backgroundSize = "cover";
+
 botao.style.backgroundColor = "purple";
 botao.style.display = "none";
 
