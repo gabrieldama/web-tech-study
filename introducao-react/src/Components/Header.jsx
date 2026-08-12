@@ -1,0 +1,22 @@
+const Header = () => {
+    const headerStyle = {
+        background: '#BEBEBE',
+        padding: '20px',
+        textAlign: 'center',
+        borderBottom: '2px solid #676767'
+    }
+
+    const titleStyle = {
+        margin: 0,
+        fontSize: '24px',
+        color: '#191970'
+    }
+
+    return (
+    <header style={headerStyle}>
+      <h1 style={titleStyle}>Introdução React</h1>
+    </header>
+    )
+}
+
+export default Header;
