@@ -12,7 +12,6 @@ const Header = (props) => {
         color: '#191970'
     }
 
-    console.log(props)
     return (
     <header style={headerStyle}>
       <h1 style={titleStyle}>{props.title}</h1>
