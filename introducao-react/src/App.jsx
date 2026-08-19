@@ -18,12 +18,17 @@ function App() {
 
      <Banner>
         <h1>Bem-vindo ao meu site</h1>
-        <p>Aqui você econtra as melhores ofertas do Murilhão</p>
+        <p>Aqui você econtra os meus testes com React</p>
     </Banner>
 
     <FilmeCard titulo="Interestelar" genero="Ficção científica">
-      Uma viagem emocionante pelo espaço e pelo tempo em busca de um novo lar
-      para a humanidade.
+      Uma viagem emocionante pelo espaço e pelo tempo.
+    </FilmeCard>
+
+<p></p>
+
+    <FilmeCard titulo="A vida é bela" genero="Drama">
+      Uma história comovente da época dos campos de concentração.
     </FilmeCard>
 
     <Card/>
