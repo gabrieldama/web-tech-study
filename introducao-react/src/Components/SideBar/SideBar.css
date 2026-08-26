@@ -1,0 +1,11 @@
+.sidebar {
+    color: yellowgreen;
+    border: 1px solid aqua;
+}
+
+h2 {
+    text-align: center;
+}
+a {
+    max-width: 50px;
+}

@@ -1,42 +1,61 @@
+import "./App.css"
 import Header from "./Components/Header"
 import Card from "./Components/Card"
 import Banner from "./Components/Banner"
 import ImgCard from "./Components/ImgCard"
+import Count from "./Components/Count"
 import FilmeCard from "./Components/FilmeCard"
 import Footer from "./Components/Footer"
+import Box from "./Components/Box"
+import SideBar from "./Components/SideBar"
 
 function App() {
   return (
-    <>
-     <Header title="Meu site"/>
+    <div className="app-layout">
 
-     <Header title="Lorem Ipsum"/>
+      <main className="app-content">
+       <section id="inicio">
+        <Header title="Meu site"/>
 
-     <Header title="Introdução React"/>
+        <Header title="Lorem Ipsum"/>
 
-     <ImgCard caption="New Lorem Ipsum" />
+        <Header title="Introdução React"/>
 
-     <Banner>
-        <h1>Bem-vindo ao meu site</h1>
-        <p>Aqui você econtra os meus testes com React</p>
-    </Banner>
+        <ImgCard caption="New Lorem Ipsum" />
 
-    
+        <Banner>
+          <h1>Bem-vindo ao meu site</h1>
+          <p>Aqui você econtra os meus testes com React</p>
+        </Banner>
 
-    <Card/>
+       </section>
 
-     <Footer title="New Lorem ipsum dolor sit amet con."/>
+      <SideBar />
 
-     {/* <FilmeCard titulo="Interestelar" genero="Ficção científica">
-      Uma viagem emocionante pelo espaço e pelo tempo.
-    </FilmeCard>
+       <section id="componentes">
+        
+        <Count />
 
-<p></p>
+        <Box />
 
-    <FilmeCard titulo="A vida é bela" genero="Drama">
-      Uma história comovente da época dos campos de concentração.
-    </FilmeCard> */}
-    </>
+        <Card/>
+       </section>
+
+       <section id="sobre">
+        <Footer title="New Lorem ipsum dolor sit amet con."/>
+       </section>
+
+       {/* <FilmeCard titulo="Interestelar" genero="Ficção científica">
+        Uma viagem emocionante pelo espaço e pelo tempo.
+      </FilmeCard>
+
+  <p></p>
+
+      <FilmeCard titulo="A vida é bela" genero="Drama">
+        Uma história comovente da época dos campos de concentração.
+      </FilmeCard> */}
+      </main>
+    </div>
   )
 }
 // Teste para GitHub
