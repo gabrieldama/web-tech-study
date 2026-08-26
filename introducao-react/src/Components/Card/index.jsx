@@ -1,7 +1,7 @@
 import "./Card.css"
 
 // Import da imagem
-import imgCard from "../assets/mg-card.jpg"
+import imgCard from "../../assets/mg-card.jpg"
 
 const Card = () => {
     return (

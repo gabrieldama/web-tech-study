@@ -1,7 +1,7 @@
 import Header from "./Components/Header"
 import Card from "./Components/Card"
 import Banner from "./Components/Banner"
-import ImgCard from "./Components/imgCard"
+import ImgCard from "./Components/ImgCard"
 import FilmeCard from "./Components/FilmeCard"
 import Footer from "./Components/Footer"
 
@@ -21,7 +21,13 @@ function App() {
         <p>Aqui você econtra os meus testes com React</p>
     </Banner>
 
-    <FilmeCard titulo="Interestelar" genero="Ficção científica">
+    
+
+    <Card/>
+
+     <Footer title="New Lorem ipsum dolor sit amet con."/>
+
+     {/* <FilmeCard titulo="Interestelar" genero="Ficção científica">
       Uma viagem emocionante pelo espaço e pelo tempo.
     </FilmeCard>
 
@@ -29,11 +35,7 @@ function App() {
 
     <FilmeCard titulo="A vida é bela" genero="Drama">
       Uma história comovente da época dos campos de concentração.
-    </FilmeCard>
-
-    <Card/>
-
-     <Footer/>
+    </FilmeCard> */}
     </>
   )
 }
