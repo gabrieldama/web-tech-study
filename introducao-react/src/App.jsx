@@ -8,6 +8,7 @@ import FilmeCard from "./Components/FilmeCard"
 import Footer from "./Components/Footer"
 import Box from "./Components/Box"
 import SideBar from "./Components/SideBar"
+import Valorant from "./Components/Valorant"
 
 function App() {
   return (
@@ -15,9 +16,6 @@ function App() {
 
       <main className="app-content">
        <section id="inicio">
-        <Header title="Meu site"/>
-
-        <Header title="Lorem Ipsum"/>
 
         <Header title="Introdução React"/>
 
@@ -37,6 +35,7 @@ function App() {
         <Count />
 
         <Box />
+        <Valorant />
 
         <Card/>
        </section>
