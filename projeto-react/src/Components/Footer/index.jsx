@@ -1,14 +1,14 @@
 import React from 'react'
-import "./Header.css"
+import './Footer.css'
 
 function index() {
   return (
-    <header className='header'>
+    <footer className='footer'>
         <section className='title-container'>
             <h1 className='title'>Título Principal</h1>
             <h2 className='subtitle'>Lorem ipsum dolor</h2>
         </section>
-    </header>
+    </footer>
   )
 }
 
