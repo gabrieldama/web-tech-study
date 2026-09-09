@@ -10,5 +10,5 @@ function index() {
     </section>
   )
 }
-
+    
 export default index

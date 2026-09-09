@@ -1,7 +1,6 @@
 .header {
   background-color: #ffffff;
-  border-top: 20px solid #ff0000;
-  border-bottom: 2px solid #ff0000;
+  border-top: 10px solid #ff0000;
   color: #414141;
   padding: 32px 20px;
   position: relative;
@@ -18,7 +17,7 @@
   left: 10px;
   object-fit: contain;
   position: absolute;
-  top: 30%;
+  top: 25%;
   width: 150px;
 }
 

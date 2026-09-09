@@ -10,10 +10,6 @@ function index() {
           <h1 className='title'>Projeto React</h1>
           <h2 className='subtitle'>Projeto React feito em aula, com tema SENAI</h2>
         </div>
-        <nav className='links'>
-          <a href='#inicio'>Início</a>
-          <a href='#contato'>Contato</a>
-        </nav>
       </section>
     </header>
   )
