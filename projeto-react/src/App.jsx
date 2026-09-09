@@ -1,13 +1,13 @@
 import Header from "./Components/Header"
-import Home from "./Pages/Home"
 import Footer from "./Components/Footer"
+import Router from "./Router"
 import "./global.css"
 function App() {
 
   return (
     <div className="app">
       <Header/>
-      <Home/>
+      <Router/>
       <Footer/>
     </div>
   )
