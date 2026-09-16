@@ -31,5 +31,17 @@
       "pergunta": "Posso usar JSON Server em produção?",
       "resposta": "JSON Server é ótimo para desenvolvimento ..."
     }
+  ],
+  "sobre": [
+    {
+      "id": "1",
+      "titulo": "Sobre o Projeto",
+      "conteudo": "Este projeto é uma aplicação React que consome dados de um JSON Server."
+    },
+    {
+      "id": "2",
+      "titulo": "Objetivo",
+      "conteudo": "O objetivo deste projeto é demonstrar como integrar React com um backend simulado usando JSON Server."
+    }
   ]
 }

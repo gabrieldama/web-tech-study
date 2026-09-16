@@ -1,23 +1,30 @@
+import { useEffect, useState } from "react"
 import "./Sobre.css"
 
 function index() {
+  const [about, setAbout] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/sobre")
+      .then((response) => response.json())
+      .then((data) => setAbout(data))
+      .catch((error) => console.log(error));
+  }, []);
+
   return (
     <section className="about-container">
       <h1 className="about-title">Sobre</h1>
 
-      <p className="about-text">
-        Este é o meu segundo projeto em React, desenvolvido durante o curso no SENAI.
-        A proposta foi aprofundar os conhecimentos em desenvolvimento web e aprender a
-        construir interfaces mais organizadas, reutilizáveis e responsivas.
-      </p>
+      {about.map((item) => (
+        <div className="about-item" key={item.id}>
+          <h2 className="about-title">{item.titulo}</h2>
+          <p className="about-description">
+            {item.conteudo}
+          </p>
+        </div>
+      ))}
 
-      <p className="about-text">
-        Durante o processo, foi possível praticar a criação de componentes, a estruturação
-        de páginas, o uso de estilos e a navegação entre telas. Também foi importante
-        entender como o React ajuda a organizar melhor o código e a facilitar a manutenção
-        de aplicações maiores.
-      </p>
-
+            
     </section>
   )
 }
