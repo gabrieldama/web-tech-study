@@ -54,3 +54,38 @@
   font-weight: normal;
   margin: 8px 0 0;
 }
+
+@media (max-width: 768px) {
+  .header {
+    padding: 24px 15px;
+  }
+
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    min-height: auto;
+  }
+
+  .logo {
+    height: 50px;
+    left: auto;
+    position: static;
+    top: auto;
+    transform: none;
+    width: 110px;
+  }
+
+  .text-container {
+    display: block;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+}
