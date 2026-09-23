@@ -5,6 +5,7 @@ import NotFound from './Pages/NotFound'
 import Nav from './Components/Nav'
 import FAQ from './Pages/FAQ'
 import Usuarios from './Pages/Usuarios'
+import Cadastro from './Pages/Cadastro'
 
 function Router() {
   return (
@@ -15,6 +16,7 @@ function Router() {
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="*" element={<NotFound />} />
+            <Route path="/cadastro" element={<Cadastro />} />
             <Route path="/usuarios" element={<Usuarios />} />
         </Routes>
     </BrowserRouter>
