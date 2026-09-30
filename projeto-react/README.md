@@ -5,3 +5,14 @@ Este projeto está sendo desenvolvido em sala de aula, com o professor Giovanni,
 Neste projeto, estamos aplicando os conceitos básicos aprendidos em React, incluindo o uso de Router para navegação entre páginas, a criação e reutilização de componentes, além de outros fundamentos do framework que foram desenvolvidos no projeto de introdução anterior.
 
 O objetivo é continuar praticando a estrutura de páginas, organização de arquivos, estilização e a lógica inicial do desenvolvimento com React, reforçando os conhecimentos adquiridos em aula.
+
+## Executar o projeto
+
+Instale as dependências com `npm install` e inicie o JSON Server e o Vite em terminais separados:
+
+```sh
+npm run server
+npm run dev
+```
+
+O JSON Server disponibiliza `GET` e `POST` em `http://localhost:3000/cadastroNews`. A tela `/cadastroNews` lista as inscrições salvas em `db.json`; `/cadastro` mantém o cadastro de usuários.

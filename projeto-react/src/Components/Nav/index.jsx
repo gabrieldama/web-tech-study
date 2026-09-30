@@ -20,6 +20,9 @@ function index() {
             <li>
                 <Link to="/cadastro">Cadastro</Link>
             </li>
+            <li>
+                <Link to="/cadastroNews">Newsletter</Link>
+            </li>
         </ul>
     </nav>
   )
