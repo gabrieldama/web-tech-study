@@ -21,7 +21,7 @@ function index() {
                 <Link to="/cadastro">Cadastro</Link>
             </li>
             <li>
-                <Link to="/cadastroNews">Newsletter</Link>
+                <Link to="/cadastroNews">News</Link>
             </li>
         </ul>
     </nav>

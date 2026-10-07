@@ -6,51 +6,36 @@ import './CadastroNews.css'
 const endpoint = 'http://localhost:3000/cadastroNews'
 
 export default function CadastroNews() {
-  const [formData, setFormData] = useState({ nome: '', email: '' })
+  const [nome, setNome] = useState('')
+  const [email, setEmail] = useState('')
   const [inscritos, setInscritos] = useState([])
-  const [isLoading, setIsLoading] = useState(true)
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [loadError, setLoadError] = useState('')
 
   useEffect(() => {
     fetch(endpoint)
-      .then((response) => {
-        if (!response.ok) throw new Error('Não foi possível carregar os inscritos.')
-        return response.json()
-      })
+      .then((response) => response.json())
       .then(setInscritos)
-      .catch(() => setLoadError('Não foi possível carregar a lista. Verifique se o JSON Server está ativo.'))
-      .finally(() => setIsLoading(false))
+      .catch(() => toast.error('Não foi possível carregar os inscritos.'))
   }, [])
 
-  const handleChange = (event) => {
-    const { name, value } = event.target
-    setFormData((previousData) => ({ ...previousData, [name]: value }))
-  }
-
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault()
-    setIsSubmitting(true)
 
-    try {
-      const response = await fetch(endpoint, {
+    fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+      body: JSON.stringify({ nome, email }),
       })
-
-      if (!response.ok) throw new Error('Não foi possível concluir a inscrição.')
-
-      const inscrito = await response.json()
-      setInscritos((previousInscritos) => [inscrito, ...previousInscritos])
-      setFormData({ nome: '', email: '' })
-      setLoadError('')
-      toast.success('Inscrição realizada com sucesso.')
-    } catch {
-      toast.error('Não foi possível realizar a inscrição. Verifique se o JSON Server está ativo.')
-    } finally {
-      setIsSubmitting(false)
-    }
+      .then((response) => {
+        if (!response.ok) throw new Error('Falha na inscrição')
+        return response.json()
+      })
+      .then((inscrito) => {
+        setInscritos(inscritos.concat(inscrito))
+        setNome('')
+        setEmail('')
+        toast.success('Inscrição realizada com sucesso.')
+      })
+      .catch(() => toast.error('Não foi possível realizar a inscrição.'))
   }
 
   return (
@@ -65,8 +50,8 @@ export default function CadastroNews() {
             name="nome"
             type="text"
             autoComplete="name"
-            value={formData.nome}
-            onChange={handleChange}
+            value={nome}
+            onChange={(event) => setNome(event.target.value)}
             required
           />
         </div>
@@ -77,14 +62,12 @@ export default function CadastroNews() {
             name="email"
             type="email"
             autoComplete="email"
-            value={formData.email}
-            onChange={handleChange}
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
             required
           />
         </div>
-        <button className="newsletter-submit" type="submit" disabled={isSubmitting}>
-          {isSubmitting ? 'Enviando...' : 'Inscrever-se'}
-        </button>
+        <button className="newsletter-submit" type="submit">Inscrever-se</button>
       </form>
 
       <section className="newsletter-list" aria-labelledby="inscritos-title">
@@ -92,11 +75,7 @@ export default function CadastroNews() {
           <h2 id="inscritos-title">Inscritos</h2>
           <span>{inscritos.length}</span>
         </div>
-        {isLoading ? (
-          <p className="newsletter-message">Carregando inscritos...</p>
-        ) : loadError ? (
-          <p className="newsletter-message" role="alert">{loadError}</p>
-        ) : inscritos.length === 0 ? (
+        {inscritos.length === 0 ? (
           <p className="newsletter-message">Ainda não há inscrições.</p>
         ) : (
           <ul className="newsletter-entries">
