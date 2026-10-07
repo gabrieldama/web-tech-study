@@ -40,7 +40,7 @@ export default function CadastroNews() {
 
   return (
     <main className="newsletter-container">
-      <h1 className="newsletter-title">Cadastro da newsletter</h1>
+      <h1 className="newsletter-title">Cadastro de News</h1>
 
       <form className="newsletter-form" onSubmit={handleSubmit}>
         <div className="newsletter-field">

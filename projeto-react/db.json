@@ -1,12 +1,6 @@
 {
   "usuarios": [
     {
-      "nome": "João Silva",
-      "telefone": "11999990001",
-      "email": "joao.silva@example.com",
-      "id": "hxr5VoES4cI"
-    },
-    {
       "nome": "Caio",
       "telefone": "44444444",
       "email": "caio@example.com",
@@ -17,18 +11,6 @@
       "telefone": "98989899",
       "email": "juliana@example.com",
       "id": "T3wAgrZm-FI"
-    },
-    {
-      "nome": "Light",
-      "telefone": "11966666666",
-      "email": "light@example.com",
-      "id": "Zv_h4uqu0FE"
-    },
-    {
-      "nome": "Plinio",
-      "telefone": "11924000000",
-      "email": "plinio@example.com",
-      "id": "uTXCfYwXCXw"
     }
   ],
   "cadastroNews": [],

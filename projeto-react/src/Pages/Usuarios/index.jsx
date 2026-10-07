@@ -11,6 +11,16 @@ function index() {
         .catch((error) => console.log(error))
     }, [])
 
+
+    const deleteUsuarios = (id) => {
+        fetch(`http://localhost:3000/usuarios/${id}`, {
+            method: "DELETE"
+    })
+    .then(() => {
+        setUsuarios(usuarios.filter((usuario) => usuario.id !== id));
+    })
+    .catch((error) => console.error(error))
+}
   return (
     <section className="container usuarios">
         <h1>Lista de Usuarios</h1>
@@ -23,7 +33,10 @@ function index() {
                 <br/>
                 <strong>Email: {user.email}</strong>
                 <br/>
-                <button className="delete">Deletar</button>
+                <button 
+                    onClick={() => deleteUsuarios(user.id)}
+                    className="delete">Deletar
+                </button>
         </article>
         ))}
 
